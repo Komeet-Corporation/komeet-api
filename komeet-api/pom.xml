@@ -5,7 +5,7 @@
     <parent>
         <groupId>fr.btssio.komeet</groupId>
         <artifactId>komeet-backend</artifactId>
-        <version>1.0.5</version>
+        <version>1.0.6-SNAPSHOT</version>
     </parent>
     <artifactId>komeet-api</artifactId>
     <packaging>war</packaging>
@@ -55,7 +55,6 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>24.1.0</version>
             <scope>compile</scope>
         </dependency>
         <dependency>

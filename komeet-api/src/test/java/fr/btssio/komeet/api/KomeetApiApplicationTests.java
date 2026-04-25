@@ -6,8 +6,8 @@ import fr.btssio.komeet.common.repository.UserRepository;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Unmodifiable;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,14 +18,13 @@ import static org.mockito.Mockito.when;
 @SpringBootTest
 class KomeetApiApplicationTests {
 
-    @Mock
+    @MockitoBean
     private UserRepository userRepository;
 
     @Test
     void contextLoads() {
         List<User> users = createUsers();
         when(userRepository.findAll()).thenReturn(users);
-        KomeetApiApplication.main(new String[0]);
     }
 
     private @NotNull @Unmodifiable List<User> createUsers() {
